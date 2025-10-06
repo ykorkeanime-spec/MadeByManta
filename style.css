@@ -1,0 +1,198 @@
+/* === Grundinställningar === */
+body {
+  margin: 0;
+  font-family: 'Poppins', 'Segoe UI', sans-serif;
+  background-color: #1e1e1e; /* mörk bakgrund */
+  color: #e4e4e4;
+  transition: all 0.4s ease;
+}
+
+/* === Tema-knapp === */
+#theme-toggle {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background: #2a2a2a;
+  color: #b0a999;
+  border: none;
+  border-radius: 50%;
+  font-size: 1.4rem;
+  cursor: pointer;
+  padding: 10px 14px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.3);
+  transition: all 0.3s ease;
+  z-index: 10;
+}
+
+#theme-toggle:hover {
+  transform: scale(1.1);
+  background-color: #3a3a3a;
+}
+
+/* === Header === */
+header {
+  background: linear-gradient(135deg, #3c3b3f, #605c3c);
+  color: #f2f2f2;
+  text-align: center;
+  padding: 60px 20px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+}
+
+header h1 {
+  margin: 0;
+  font-size: 2.4rem;
+}
+
+/* === Navigation === */
+nav {
+  background-color: #2a2a2a;
+  border-top: 1px solid #3a3a3a;
+  border-bottom: 1px solid #3a3a3a;
+}
+
+nav ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  justify-content: center;
+}
+
+nav ul li {
+  margin: 0 25px;
+}
+
+nav ul li a {
+  color: #b0a999;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s;
+}
+
+nav ul li a:hover {
+  color: #d4cfc2;
+}
+
+/* === Main content === */
+main {
+  padding: 50px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.intro {
+  text-align: center;
+}
+
+.intro img {
+  width: 70%;
+  border-radius: 16px;
+  margin-top: 25px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.3);
+}
+
+/* === Projekt-sektion === */
+.projects {
+  margin-top: 80px;
+}
+
+.projects h2 {
+  text-align: center;
+  color: #b0a999;
+  margin-bottom: 30px;
+}
+
+.project-cards {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.card {
+  background-color: #2a2a2a;
+  border: 1px solid #3a3a3a;
+  border-radius: 12px;
+  padding: 25px;
+  width: 270px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 0 15px rgba(200, 190, 160, 0.3);
+}
+
+.card h3 {
+  color: #d4cfc2;
+}
+
+/* === Footer === */
+footer {
+  background-color: #2a2a2a;
+  color: #bbb;
+  text-align: center;
+  padding: 20px;
+  border-top: 1px solid #3a3a3a;
+  margin-top: 80px;
+}
+
+/* === ☀️ LJUST TEMA – varm, beige och mjuk === */
+body.light-theme {
+  background-color: #ede9e3; /* ljus beige */
+  color: #3c3b3f; /* mjuk mörkgrå text */
+}
+
+body.light-theme header {
+  background: linear-gradient(135deg, #cfc7b3, #b8ae99);
+  color: #3c3b3f;
+}
+
+body.light-theme nav {
+  background-color: #e4ddd3;
+  border-top: 1px solid #d4cfc2;
+  border-bottom: 1px solid #d4cfc2;
+}
+
+body.light-theme nav ul li a {
+  color: #7b766a;
+}
+
+body.light-theme nav ul li a:hover {
+  color: #3c3b3f;
+}
+
+body.light-theme main {
+  background-color: transparent;
+}
+
+body.light-theme .card {
+  background-color: #f3efe9;
+  border: 1px solid #d4cfc2;
+  box-shadow: 0 2px 8px rgba(60, 59, 63, 0.1);
+}
+
+body.light-theme .card h3 {
+  color: #7b766a;
+}
+
+body.light-theme .card:hover {
+  box-shadow: 0 4px 12px rgba(100, 90, 70, 0.2);
+}
+
+body.light-theme footer {
+  background-color: #e4ddd3;
+  color: #555;
+  border-top: 1px solid #d4cfc2;
+}
+
+body.light-theme #theme-toggle {
+  background: #e4ddd3;
+  color: #7b766a;
+  box-shadow: 0 0 8px rgba(100, 90, 70, 0.15);
+}
+
+body.light-theme #theme-toggle:hover {
+  background-color: #d9d2c8;
+}
