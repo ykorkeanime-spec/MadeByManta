@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Min Första Hemsida</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <button id="theme-toggle">☀️</button>
+
+  <!-- Header -->
+  <header>
+    <h1>Made by Manta</h1>
+    <p>En liten webbsida där jag säljer unika tavlor!</p>
+  </header>
+
+  <!-- Navigation -->
+  <nav>
+    <ul>
+      <li><a href="#">Hem</a></li>
+      <li><a href="#">Om mig</a></li>
+      <li><a href="#">Projekt</a></li>
+      <li><a href="#">Kontakt</a></li>
+    </ul>
+  </nav>
+
+  <!-- Main content -->
+  <main>
+    <section class="intro">
+      <h2>Om mig</h2>
+      <p>Hej! Jag heter Manta och jag gillar att skapa konst! Mina tavlor är alla unika där bara ett exemplar finns!</p>
+      <img src="https://images.unsplash.com/photo-1503264116251-35a269479413" alt="Laptop och kaffe">
+    </section>
+
+    <section class="projects">
+      <h2>Mina Projekt</h2>
+      <div class="project-cards">
+        <div class="card">
+          <h3>Projekt 1</h3>
+          <p>Ett exempel på ett projekt jag har gjort.</p>
+        </div>
+        <div class="card">
+          <h3>Projekt 2</h3>
+          <p>Här kan du skriva om något annat du har skapat.</p>
+        </div>
+        <div class="card">
+          <h3>Projekt 3</h3>
+          <p>Ytterligare ett exempel – kanske något du är stolt över!</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 Yasmine. All rights reserved.</p>
+  </footer>
+
+    <script>
+    // Hämta knappen och body
+    const toggleBtn = document.getElementById("theme-toggle");
+    const body = document.body;
+
+    // Kolla om användaren redan har valt ett tema tidigare
+    if (localStorage.getItem("theme") === "light") {
+      body.classList.add("light-theme");
+      toggleBtn.textContent = "🌙";
+    }
+
+    // Växla tema vid klick
+    toggleBtn.addEventListener("click", () => {
+      body.classList.toggle("light-theme");
+
+      if (body.classList.contains("light-theme")) {
+        toggleBtn.textContent = "🌙";
+        localStorage.setItem("theme", "light");
+      } else {
+        toggleBtn.textContent = "☀️";
+        localStorage.setItem("theme", "dark");
+      }
+    });
+  </script>
+
+</body>
+</html>
+
